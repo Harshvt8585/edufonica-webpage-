@@ -121,7 +121,7 @@ if (serviceSearch && servicesGrid) {
 }
 
 /* =================================================================
-   6. CONTACT FORM VALIDATION
+   6. WHATSAPP CONTACT REDIRECTION
    ================================================================= */
 const contactForm = document.getElementById('contactForm');
 const formFeedback = document.getElementById('formFeedback');
@@ -140,7 +140,17 @@ if (contactForm) {
       return; 
     }
     
-    formFeedback.textContent = 'Thank you! Your message has been sent.';
+    // 1. Build the message template (use %0A for new line breaks in the URL)
+    const whatsappMessage = `Hello! My name is ${name}.%0A%0AMy email is: ${email}%0A%0AHere is my message:%0A${message}`;
+    
+    // 2. Construct the official WhatsApp API URL with the phone number
+    const whatsappUrl = `https://wa.me/919839838585?text=${whatsappMessage}`;
+    
+    // 3. Open WhatsApp in a new tab (or switch to the app on mobile)
+    window.open(whatsappUrl, '_blank');
+    
+    // 4. Show a success message and clear the form
+    formFeedback.textContent = 'Opening WhatsApp...';
     formFeedback.className = 'form-feedback success';
     contactForm.reset();
   });
