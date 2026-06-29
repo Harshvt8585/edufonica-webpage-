@@ -242,7 +242,6 @@ ul { list-style: none; }
   align-items: center;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Creates a cool parallax scrolling effect */
   position: relative;
   padding-top: 80px; /* Offset for header */
 }
