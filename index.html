@@ -17,9 +17,9 @@
 <body>
  
   <!-- ============ HEADER ============ -->
-  <header class="site-header">
+  <header class="site-header" id="mainHeader">
     <div class="container header-inner">
-      <a href="index.html" class="logo-link">
+      <a href="#hero" class="logo-link">
         <img src="images/logo.png" alt="Edufonica Solutions" class="logo-img">
       </a>
       
@@ -32,14 +32,14 @@
 
       <nav class="main-nav" id="mainNav">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
  
-      <a href="contact.html" class="btn btn-primary header-cta">Let's Talk</a>
+      <a href="#contact" class="btn btn-primary header-cta">Let's Talk</a>
     </div>
   </header>
  
@@ -47,8 +47,9 @@
   <main>
  
     <!-- ============ HERO SECTION ============ -->
-    <section class="hero">
-      <div class="container hero-inner">
+    <section id="hero" class="hero" style="background-image: url('images/Hero Background Photo.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner relative">
  
         <!-- LEFT COLUMN: text content -->
         <div class="hero-text reveal">
@@ -61,33 +62,192 @@
             that works for today's classrooms, and handling the administrative
             groundwork, so you can focus on building something that lasts.
           </p>
-          <a href="contact.html" class="btn btn-primary hero-cta">Let's Talk About Your School</a>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary hero-cta">Let's Talk About Your School</a>
+            <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+          </div>
         </div>
- 
-        <!-- RIGHT COLUMN: abstract SVG graphic -->
-        <div class="hero-graphic reveal reveal-delay-2">
-          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
-            <!-- soft circular backdrop -->
-            <circle cx="200" cy="200" r="170" fill="var(--blue-tint)" />
- 
-            <!-- layered angled panels, echoing the logo's book-page motif -->
-            <polygon points="90,60 230,30 250,340 110,370" fill="var(--blue)" opacity="0.12" />
-            <polygon points="120,55 250,40 260,320 130,335" fill="var(--blue)" opacity="0.22" />
-            <polygon points="150,50 270,55 270,300 150,300" fill="var(--blue)" />
- 
-            <!-- orange accent stripe, echoing the logo's orange edge line -->
-            <polygon points="150,50 165,50 165,300 150,300" fill="var(--orange)" />
- 
-            <!-- small dot grid accent for texture -->
-            <g fill="var(--orange)" opacity="0.6">
-              <circle cx="300" cy="90" r="4" />
-              <circle cx="320" cy="110" r="4" />
-              <circle cx="300" cy="130" r="4" />
-              <circle cx="320" cy="150" r="4" />
-            </g>
-          </svg>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about" class="page-section">
+      <div class="container">
+        <!-- Intro Area -->
+        <div class="about-intro reveal">
+          <div class="intro-grid">
+            <div class="intro-text">
+              <h4 class="section-tag">Who We Are</h4>
+              <h2 class="section-title">People Who Understand Schools, Not Just Marketing</h2>
+              <p>
+                Edufonica Solutions was built for one purpose: helping schools, colleges, and training institutes grow — properly. We're part education strategists, part marketers, part technologists, but every one of us understands that a school isn't just a business. It's someone's life work, and often a community's trust.
+              </p>
+              <p>
+                Whether you're opening your first campus, expanding an existing one, or trying to fill more seats this admission season, we bring a team that's done this before — and we stay accountable for the results, not just the advice.
+              </p>
+              <p class="intro-quote">"Your institution's growth is our commitment."</p>
+            </div>
+            <div class="intro-image reveal reveal-delay-2">
+              <img src="images/about_team.png" alt="Collaborative team meeting" class="premium-image">
+            </div>
+          </div>
         </div>
- 
+
+        <!-- Process Area -->
+        <div class="about-process">
+          <h2 class="section-title text-center reveal">How We Work With You</h2>
+          <p class="section-subtitle text-center reveal">Every school we work with is different, so we don't believe in one-size-fits-all playbooks. Here's the path we walk together:</p>
+          
+          <div class="process-grid">
+            <div class="process-card shadow-premium reveal reveal-delay-1">
+              <div class="process-num">01</div>
+              <h3>Understand Your Goals</h3>
+              <p>We start by really listening: what you're building, what's holding you back, and what success looks like for you.</p>
+            </div>
+            <div class="process-card shadow-premium reveal reveal-delay-2">
+              <div class="process-num">02</div>
+              <h3>Build the Strategy</h3>
+              <p>Our team puts together a plan tailored to your institution — covering marketing, technology, branding, and day-to-day operations.</p>
+            </div>
+            <div class="process-card shadow-premium reveal reveal-delay-3">
+              <div class="process-num">03</div>
+              <h3>Design & Create</h3>
+              <p>From websites to ad campaigns to school software, we build everything to reflect who you are and speak to the families you want to reach.</p>
+            </div>
+            <div class="process-card shadow-premium reveal reveal-delay-1">
+              <div class="process-num">04</div>
+              <h3>Work Alongside You</h3>
+              <p>We don't disappear after handoff. Our team works with yours, in the trenches, adjusting as we go.</p>
+            </div>
+            <div class="process-card shadow-premium reveal reveal-delay-2">
+              <div class="process-num">05</div>
+              <h3>Deliver & Sustain</h3>
+              <p>We track real outcomes against what we promised — and keep refining until your goals aren't just met, but lasting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES SECTION ============ -->
+    <section id="services" class="page-section bg-tint">
+      <div class="container">
+        <div class="text-center reveal">
+          <h4 class="section-tag">Our Expertise</h4>
+          <h2 class="section-title">Everything Your Institution Needs</h2>
+          <p class="section-subtitle">To start, grow, and run smoothly — under one roof.</p>
+        </div>
+
+        <!-- Search Filter -->
+        <div class="services-filter-container reveal reveal-delay-1">
+          <input type="text" id="serviceSearch" class="search-input shadow-premium" placeholder="Search for a service (e.g., Marketing, SEO, ERP)...">
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid" id="servicesGrid">
+          <div class="service-card shadow-premium reveal">
+            <h3>1. Starting a New School or College</h3>
+            <p>Thinking of starting a school? We'll walk with you from picking the right location to securing board affiliation, shaping your curriculum, and opening your doors.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>2. Expanding to a New Branch or Franchise</h3>
+            <p>Already running a school and ready to grow? We help you expand into new cities or build a franchise model that keeps your standards consistent everywhere.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>3. Market Research & Feasibility</h3>
+            <p>Before you invest a rupee, know what you're walking into. We map the local competition, study the location, and tell you honestly whether it's a smart bet.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>4. Brand Identity That People Remember</h3>
+            <p>Your logo, your colours, your voice — we shape a brand identity that makes parents trust you before they've even stepped on campus.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>5. Admission Campaigns That Actually Fill Seats</h3>
+            <p>We run Google Ads, Meta Ads, and offline campaigns built to bring in serious, ready-to-enrol families — not just clicks.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>6. Websites That Turn Visitors into Enquiries</h3>
+            <p>A school website should do more than look nice. We build fast, mobile-friendly sites designed to turn curious parents into admission enquiries.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>7. Social Media That Builds a Community</h3>
+            <p>We manage your Instagram, Facebook, and YouTube with content that builds real engagement — not just likes.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>8. Showing Up First on Google</h3>
+            <p>Local SEO and Google listing management, so when a parent nearby searches for a school, you're the one they find first.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>9. School Management Software (ERP)</h3>
+            <p>Admissions, attendance, fees, library, hostel, HR — one powerful system built specifically for how schools actually run.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>10. CRM & Admission Automation</h3>
+            <p>Custom CRM setup and automated follow-ups that nurture enquiries into enrolled students, even while your team sleeps.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>11. Dashboards That Show What's Working</h3>
+            <p>Real-time data on your campaigns and operations, so you always know where to double down and where to pull back.</p>
+          </div>
+          <div class="service-card shadow-premium reveal">
+            <h3>12. Training for Your Team</h3>
+            <p>Leadership coaching, admissions training, and teacher workshops — built to grow the people running your institution, not just the institution itself.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact" class="page-section">
+      <div class="container">
+        <div class="contact-inner">
+          <!-- Left Column -->
+          <div class="contact-details reveal">
+            <h4 class="section-tag">Get In Touch</h4>
+            <h2 class="section-title">Let's Talk About Your School</h2>
+            <p class="section-subtitle" style="margin-left: 0; max-width: 100%;">
+              Whatever stage you're at — just an idea, mid-expansion, or trying to fill more seats — we're happy to hear about it. Reach out, no pressure, no sales script.
+            </p>
+            
+            <div class="detail-box shadow-premium">
+              <h3>Call Us</h3>
+              <p>+91 98398 38585</p>
+              <p class="muted-text">Mon–Sat • 9:30 AM – 7:00 PM IST</p>
+            </div>
+            
+            <div class="detail-box shadow-premium">
+              <h3>Email Us</h3>
+              <p>edufonica@gmail.com</p>
+              <p class="muted-text">We reply within 12 hours</p>
+            </div>
+            
+            <div class="detail-box shadow-premium">
+              <h3>Head Office</h3>
+              <p>B-35, Sector 62, Noida (UP), India</p>
+            </div>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="contact-form-wrapper reveal reveal-delay-2 shadow-premium">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="message">How can we help?</label>
+                <textarea id="message" rows="5" placeholder="Tell us about your institution..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+              <div id="formFeedback" class="form-feedback"></div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
  
