@@ -258,6 +258,42 @@ ul { list-style: none; }
 .hero-inner {
   z-index: 2; /* Keeps text above the overlay */
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-graphics {
+  position: relative;
+  height: 400px;
+}
+
+.floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+  animation: float 6s ease-in-out infinite;
+  /* Override glass-panel background slightly to be more opaque */
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.floating-card h3 { color: var(--blue-dark); font-size: 24px; margin-bottom: 2px; }
+.floating-card p { color: var(--text-muted); font-size: 14px; font-weight: 500; margin-bottom: 0; }
+.card-icon { font-size: 32px; }
+
+.card-1 { top: 10%; right: 10%; animation-delay: 0s; }
+.card-2 { top: 40%; left: 0%; animation-delay: 1.5s; }
+.card-3 { bottom: 10%; right: 20%; animation-delay: 3s; }
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
 }
 
 .hero-text {
@@ -293,6 +329,8 @@ ul { list-style: none; }
 }
 
 @media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-graphics { display: none; }
   .hero-headline { font-size: 40px; }
   .hero-buttons { flex-direction: column; }
 }
